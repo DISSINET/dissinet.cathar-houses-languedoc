@@ -191,6 +191,9 @@ button.success {
       &.active {
         color: config("colors.muni");
       }
+      &.inactive {
+        color: config("colors.black");
+      }
     }
 
     .leaflet-tile-container {

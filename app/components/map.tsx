@@ -98,6 +98,25 @@ export default class MapComponent extends React.Component<Props> {
     });
   }
 
+  tooltip(record) {
+    return (
+      <div>
+        [{record.id}] <b>{record.placename}</b>
+        <br />
+        <i className="icon icon-clock"></i>{" "}
+        {record.years.join(", ") || "no data"}
+        <br />
+        {record.sources.map(source => {
+          return (
+            <div>
+              <i className="icon icon-scroll"></i> {source}
+            </div>
+          );
+        })}
+      </div>
+    );
+  }
+
   render() {
     const iconSize = [25, 25];
     return (
@@ -110,7 +129,7 @@ export default class MapComponent extends React.Component<Props> {
           ref={this.mapRef}
           onViewportChanged={this.handleMapMove.bind(this)}
         >
-          <Pane style={{ zIndex: 800 }} key="active" name="active">
+          <Pane style={{ zIndex: 300 }} key="active" name="active">
             {this.props.active.map((record, ri) => {
               return (
                 <Marker
@@ -118,14 +137,12 @@ export default class MapComponent extends React.Component<Props> {
                   position={record.geo.geometry.coordinates}
                   icon={this.icon("fa fa-map-marker active", "", iconSize)}
                 >
-                  <Tooltip direction="right">
-                    <h4>{record.name}</h4>
-                  </Tooltip>
+                  <Tooltip direction="right">{this.tooltip(record)}</Tooltip>
                 </Marker>
               );
             })}
           </Pane>
-          <Pane style={{ zIndex: 700 }} key="inactive" name="inactive">
+          <Pane style={{ zIndex: 250 }} key="inactive" name="inactive">
             {this.props.inactive.map((record, ri) => {
               return (
                 <Marker
@@ -133,9 +150,7 @@ export default class MapComponent extends React.Component<Props> {
                   position={record.geo.geometry.coordinates}
                   icon={this.icon("fa fa-map-marker inactive", "", iconSize)}
                 >
-                  <Tooltip direction="right">
-                    <h4>{record.name}</h4>
-                  </Tooltip>
+                  <Tooltip direction="right">{this.tooltip(record)}</Tooltip>
                 </Marker>
               );
             })}

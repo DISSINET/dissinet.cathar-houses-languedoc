@@ -43,6 +43,7 @@ export default class App extends React.Component<Props> {
           center={store.center}
           zoom={store.zoom}
           active={store.active}
+          inactive={store.inactive}
         />
         {store.panel && (
           <div>
