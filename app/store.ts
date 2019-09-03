@@ -133,14 +133,24 @@ export default class AppStore {
     this._welcome.set(false);
   }
 
-  @action activateFilter(filterId) {
+  @action activateFilter(groupId, optionId) {
     const newFilters = toJS(this.filters);
-    const filterToChange = newFilters.find(f => f.id === filterId);
+    const filterGroup = newFilters.find(f => f.id === groupId);
+    if (filterGroup) {
+      const filterOption = filterGroup.options.find(f => f.id === optionId);
+      if (filterOption) {
+        if (filterGroup.type === "checkbox") {
+          filterOption.active = !filterOption.active;
+        } else if (filterGroup.type === "radio") {
+          filterGroup.options.forEach(o => (o.active = false));
+          filterOption.active = true;
+        }
+      }
+    }
 
     // TODO: implement filter logic
 
     console.log(newFilters);
-    console.log(this);
 
     this._filters.set(newFilters);
   }

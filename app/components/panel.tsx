@@ -11,8 +11,8 @@ export default class PanelComponent extends React.Component<Props> {
     super(props);
   }
 
-  toggleCheckbox(e) {
-    this.props.activateFilter(e.target.id);
+  toggleCheckbox(groupId, optionId) {
+    this.props.activateFilter(groupId, optionId);
   }
 
   handleOpenWelcome(e) {
@@ -73,7 +73,11 @@ export default class PanelComponent extends React.Component<Props> {
                       label: option.label,
                       type: filterGroup.type,
                       checked: option.active,
-                      event: this.toggleCheckbox
+                      event: this.toggleCheckbox.bind(
+                        this,
+                        filterGroup.id,
+                        option.id
+                      )
                     });
                   })}
                 </ul>
