@@ -1,0 +1,18 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "dist",
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./app",
+    "paths": {
+      "*": ["./app/*"]
+    },
+    "jsx": "react",
+    "target": "es5"
+  },
+  "include": ["app/*.*", "app/**/*.*", "test/*.*", "test/**/*.*"],
+  "exclude": [".git", "node_modules"]
+}
