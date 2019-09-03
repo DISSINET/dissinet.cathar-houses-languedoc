@@ -36,22 +36,32 @@ export default class AppStore {
         {
           id: "until 1209",
           label: "until 1209",
-          active: true
+          active: true,
+          fn: d => d.period1
         },
         {
           id: "1210-1219",
           label: "1210-1219",
-          active: true
+          active: true,
+          fn: d => d.period2
         },
         {
           id: "1220-1229",
           label: "1220-1229",
-          active: true
+          active: true,
+          fn: d => d.period3
         },
         {
           id: "1230-1244",
           label: "1230-1244",
-          active: true
+          active: true,
+          fn: d => d.period4
+        },
+        {
+          id: "nodata",
+          label: "no data",
+          active: true,
+          fn: d => d.period0
         }
       ]
     }
@@ -71,6 +81,11 @@ export default class AppStore {
   @computed
   get welcome() {
     return toJS(this._welcome);
+  }
+
+  @computed
+  get geoData() {
+    return this.data.filter(d => d.geo);
   }
 
   @computed
@@ -100,11 +115,30 @@ export default class AppStore {
 
   @computed
   get active(): Array<any> {
-    const activeFilters = this.filters.filter(f => f.active);
-
-    // TODO: implement filters
-    return this.data.filter(d => d.geo);
+    return this.geoData.filter(d => this.isActive(d));
   }
+
+  @computed
+  get inactive(): Array<any> {
+    return this.geoData.filter(d => !this.isActive(d));
+  }
+
+  isActive = d => {
+    const modeGroup = this.filters.find(fg => fg.id === "period-mode");
+    const orOption = modeGroup.options.find(o => o.id === "or");
+    const or = orOption.active;
+
+    const timePeriodsGroup = this.filters.find(fg => fg.id === "period-time");
+    const timePeriodsOptionsActive = timePeriodsGroup.options.filter(
+      o => o.active
+    );
+    if (timePeriodsOptionsActive.length) {
+      return or
+        ? timePeriodsOptionsActive.some(o => o.fn(d))
+        : timePeriodsOptionsActive.every(o => o.fn(d));
+    }
+    return false;
+  };
 
   @action
   mapMoved(

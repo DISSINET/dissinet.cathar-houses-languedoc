@@ -6,7 +6,7 @@ import {
   Map,
   Marker,
   TileLayer,
-  LayersControl,
+  Pane,
   Tooltip,
   LayerGroup,
   ScaleControl
@@ -99,12 +99,7 @@ export default class MapComponent extends React.Component<Props> {
   }
 
   render() {
-    L.icon({
-      iconUrl: "https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png",
-      iconSize: [25, 40],
-      iconAnchor: [12, 40]
-    });
-
+    const iconSize = [25, 25];
     return (
       <div className="map" data-testid="map-wrapper">
         <Map
@@ -115,19 +110,36 @@ export default class MapComponent extends React.Component<Props> {
           ref={this.mapRef}
           onViewportChanged={this.handleMapMove.bind(this)}
         >
-          {this.props.active.map((record, ri) => {
-            return (
-              <Marker
-                key={ri}
-                position={record.geo.geometry.coordinates}
-                icon={this.icon("fa fa-map-marker active", "", [20, 20])}
-              >
-                <Tooltip direction="right">
-                  <h4>{record.name}</h4>
-                </Tooltip>
-              </Marker>
-            );
-          })}
+          <Pane style={{ zIndex: 800 }} key="active" name="active">
+            {this.props.active.map((record, ri) => {
+              return (
+                <Marker
+                  key={ri}
+                  position={record.geo.geometry.coordinates}
+                  icon={this.icon("fa fa-map-marker active", "", iconSize)}
+                >
+                  <Tooltip direction="right">
+                    <h4>{record.name}</h4>
+                  </Tooltip>
+                </Marker>
+              );
+            })}
+          </Pane>
+          <Pane style={{ zIndex: 700 }} key="inactive" name="inactive">
+            {this.props.inactive.map((record, ri) => {
+              return (
+                <Marker
+                  key={ri}
+                  position={record.geo.geometry.coordinates}
+                  icon={this.icon("fa fa-map-marker inactive", "", iconSize)}
+                >
+                  <Tooltip direction="right">
+                    <h4>{record.name}</h4>
+                  </Tooltip>
+                </Marker>
+              );
+            })}
+          </Pane>
 
           <ScaleControl />
           {this.props.zoom < 11 ? (
