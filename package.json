@@ -12,6 +12,7 @@
   "scripts": {
     "clean-dist": "rm -f -r -d dist",
     "start": "parcel app/index.html --open --no-cache",
+    "parse": "node data/parse.js",
     "build": "npm run clean-dist && parcel build app/index.html --no-cache --public-url ./",
     "deploy": "rsync -avz build/ <user@url:/path> --delete",
     "build-deploy": "npm run build && npm run deploy",
@@ -42,6 +43,7 @@
     "babel-preset-env": "^1.7.0",
     "components": "^0.1.0",
     "d3": "^5.11.0",
+    "google-spreadsheet": "^2.0.7",
     "leaflet": "^1.3.4",
     "leaflet.markercluster": "^1.4.1",
     "mobx": "^5.9.4",
@@ -56,6 +58,7 @@
     "react-leaflet": "^2.2.1",
     "sass": "^1.19.0",
     "tailwindcss": "^0.7.4",
+    "turf": "^3.0.14",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
