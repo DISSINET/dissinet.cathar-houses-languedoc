@@ -1,5 +1,15 @@
 :root {
-  --panel-w: 20em;
+  --panel-w: 24em;
+  --panel-w-mobile: 15em;
+}
+
+input[type="radio"]:after {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  left: -31px;
+  top: 2px;
+  color: transparent;
+  transition: color 0.2s;
 }
 
 button {
@@ -8,7 +18,6 @@ button {
   @apply text-xs;
   @apply py-2;
   @apply px-3;
-  @apply rounded;
   @apply m-2;
 }
 
@@ -25,33 +34,169 @@ button.success {
   @apply bg-success;
 }
 
+.cluster {
+  .cluster-symbols > * {
+    stroke: config("colors.white");
+    stroke-width: 0.8;
+    stroke-opacity: 1;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+  }
+  .cluster-texts > * {
+    font-weight: medium;
+    fill: config("colors.white");
+  }
+
+  circle.total {
+    fill: config("colors.muni");
+  }
+}
+
 .app-wrapper {
+  .hero {
+    background-position-x: -1px;
+    background-repeat: round;
+
+    @font-face {
+      font-family: "Muni";
+      src: url("./../../assets/muni-bold-webfont.woff2") format("woff2"),
+        url("./../../assets/muni-bold-webfont.woff") format("woff");
+    }
+    font-family: "Muni", Arial, Helvetica Neue, sans-serif;
+  }
+
+  font-family: Arial, Helvetica Neue, sans-serif;
   @apply absolute;
-  @apply .pin-y;
+  @apply pin-y;
   @apply pin-r;
   @apply pin-l;
+
+  ul {
+    @apply mb-4;
+    display: table;
+    li {
+      display: table-row;
+      @apply my-2;
+      span {
+        @apply table-cell;
+        min-width: 25px;
+      }
+    }
+  }
+  .welcome {
+    @apply z-20;
+    @apply absolute;
+    @apply pin-y;
+    @apply pin-r;
+    @apply pin-l;
+    .background {
+      @apply z-10;
+      @apply w-full;
+      @apply h-full;
+      @apply absolute;
+      @apply bg-black;
+      opacity: 0.9;
+    }
+    .content {
+      @apply absolute;
+      @apply z-20;
+      @apply bg-white;
+      margin-left: 15%;
+      margin-top: 5%;
+      max-width: 70%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 90%;
+
+      p.small {
+        font-size: 90%;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+  }
+
   .panel {
     width: var(--panel-w);
     @apply absolute;
     @apply bg-white;
     @apply z-10;
-    @apply px-4;
-    @apply py-4;
     @apply pin-y;
-    @apply pin-l;
+    @apply pin-r;
+    max-height: 100%;
+
     .heading {
-      @apply mb-4;
+      font-size: 1.4rem;
+    }
+    .subheading {
+      font-size: 0.9rem;
+    }
+
+    .legend {
+      img {
+        width: 100%;
+        background: url("./../../assets/legend.png") no-repeat;
+        height: 12em;
+        background-repeat: round;
+        border: 2px solid white;
+        border: 0;
+      }
+    }
+    .panel-content {
+      position: absolute;
+      top: 170px;
+      width: 100%;
+      top: 170px;
+      bottom: 75px;
+      overflow-y: auto;
     }
   }
+
+  .panel-footer {
+    width: var(--panel-w);
+  }
+
   .map {
     @apply z-0;
     @apply absolute;
     @apply pin-y;
-    @apply pin-r;
-    width: calc(100% - var(--panel-w));
+    @apply pin-l;
     .leaflet-container {
       @apply w-full;
       @apply h-full;
     }
+
+    .leaflet-tile-container {
+      filter: sepia(0.2) grayscale(0.5);
+    }
   }
+}
+
+.panel-on {
+  .map {
+    width: calc(100% - var(--panel-w));
+  }
+}
+.panel-off {
+  .map {
+    width: 100%;
+  }
+}
+
+.panel-hider {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 0px;
+  z-index: 20;
+  right: 0;
 }

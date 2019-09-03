@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate_map",
+  "name": "dissinet.house-of-heretics",
   "version": "0.0.1",
-  "description": "boilerplate for react-leaflet map applications",
+  "description": "Houses of heretics: Cathar religious houses in Languedoc",
   "author": "Adam Mertel <mertel.adam@gmail.com>",
   "license": "ISC",
   "bugs": {
@@ -41,7 +41,9 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "components": "^0.1.0",
-    "leaflet": "^1.5.1",
+    "d3": "^5.11.0",
+    "leaflet": "^1.3.4",
+    "leaflet.markercluster": "^1.4.1",
     "mobx": "^5.9.4",
     "mobx-react": "^5.4.3",
     "postcss-custom-properties": "^8.0.10",

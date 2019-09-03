@@ -1,6 +1,1 @@
-# Map boilerplate
- * npm
- * parcel
- * typescript
- * mobx
- * leaflet + leaflet react
+# Houses of heretics: Cathar religious houses in Languedoc
