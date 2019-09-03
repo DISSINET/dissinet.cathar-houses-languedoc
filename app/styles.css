@@ -8,3 +8,5 @@
 @import "./css/custom-components.css";
 
 @import "./css/tailwind/utilities.css";
+
+@import "./../node_modules/font-awesome/css/font-awesome.css";

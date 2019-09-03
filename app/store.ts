@@ -58,10 +58,10 @@ export default class AppStore {
   ];
 
   constructor(data) {
-    this._center = observable.box([52, -1]);
-    this._zoom = observable.box(7);
+    this._center = observable.box([43.5, 2]);
+    this._zoom = observable.box(9);
     this._extent = observable.box([]);
-    this._welcome = observable.box(true);
+    this._welcome = observable.box(false);
     this._panel = observable.box(true);
 
     this._filters = observable.box(this.defaultFilters);
@@ -103,9 +103,7 @@ export default class AppStore {
     const activeFilters = this.filters.filter(f => f.active);
 
     // TODO: implement filters
-    return this.data.filter(feat => {
-      return activeFilters.every(filter => filter.fn(feat));
-    });
+    return this.data.filter(d => d.geo);
   }
 
   @action

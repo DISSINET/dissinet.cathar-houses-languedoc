@@ -175,6 +175,24 @@ button.success {
       @apply h-full;
     }
 
+    .fa-map-marker {
+      text-shadow: 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
+        0px 0px 2px white, 0px 0px 2px white;
+
+      &.active {
+        color: config("colors.muni");
+      }
+    }
+
     .leaflet-tile-container {
       filter: sepia(0.2) grayscale(0.5);
     }
