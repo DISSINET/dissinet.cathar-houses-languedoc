@@ -1,4 +1,5 @@
 import { keys, toJS, observable, action, computed } from "mobx";
+import { inferredPredicate } from "@babel/types";
 
 export default class AppStore {
   _center;
@@ -11,11 +12,48 @@ export default class AppStore {
 
   defaultFilters = [
     {
-      category: "revolts",
-      id: "revolts-all",
-      label: "no filter",
-      fn: p => true,
-      active: true
+      id: "period-mode",
+      label: "Period - mode",
+      type: "radio",
+      options: [
+        {
+          id: "or",
+          label: "OR",
+          active: true
+        },
+        {
+          id: "and",
+          label: "AND",
+          active: false
+        }
+      ]
+    },
+    {
+      id: "period-time",
+      label: "Periods",
+      type: "checkbox",
+      options: [
+        {
+          id: "until 1209",
+          label: "until 1209",
+          active: true
+        },
+        {
+          id: "1210-1219",
+          label: "1210-1219",
+          active: true
+        },
+        {
+          id: "1220-1229",
+          label: "1220-1229",
+          active: true
+        },
+        {
+          id: "1230-1244",
+          label: "1230-1244",
+          active: true
+        }
+      ]
     }
   ];
 
@@ -64,6 +102,7 @@ export default class AppStore {
   get active(): Array<any> {
     const activeFilters = this.filters.filter(f => f.active);
 
+    // TODO: implement filters
     return this.data.filter(feat => {
       return activeFilters.every(filter => filter.fn(feat));
     });
@@ -98,12 +137,8 @@ export default class AppStore {
     const newFilters = toJS(this.filters);
     const filterToChange = newFilters.find(f => f.id === filterId);
 
-    if (filterToChange) {
-      newFilters
-        .filter(f => f.category === filterToChange.category)
-        .forEach(f => (f.active = false));
-      filterToChange.active = true;
-    }
+    // TODO: implement filter logic
+
     console.log(newFilters);
     console.log(this);
 

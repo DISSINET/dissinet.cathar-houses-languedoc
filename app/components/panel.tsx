@@ -19,7 +19,7 @@ export default class PanelComponent extends React.Component<Props> {
     this.props.openWelcome();
   }
 
-  renderCheckbox(data: { key; value; label; checked; event; style? }) {
+  renderCheckbox(data: { key; value; type; label; checked; event; style? }) {
     return (
       <li key={data.key} className="md:items-center ">
         <label className="block text-gray-500 font-bold">
@@ -34,14 +34,17 @@ export default class PanelComponent extends React.Component<Props> {
               <i
                 id={data.key}
                 onClick={data.event.bind(this)}
-                className="icon icon-circle mr-2 mt-2 text-black"
+                className={
+                  "icon mr-2 mt-2 text-black " +
+                  (data.type === "checkbox" ? "icon-square" : "icon-circle")
+                }
               />
             )}
           </span>
           <span
             id={data.key}
             onClick={data.event.bind(this)}
-            className="text-sm align-text-top tb-2  font-normal"
+            className="text-sm align-text-top tb-2 font-normal"
           >
             {data.label}
           </span>
@@ -57,36 +60,26 @@ export default class PanelComponent extends React.Component<Props> {
         <Hero />
         <br />
         <div className="panel-content px-4">
-          <b>revolts</b>
-          <ul>
-            {this.props.filters
-              .filter(f => f.category === "revolts")
-              .map(revoltFilter => {
-                return this.renderCheckbox({
-                  key: revoltFilter.id,
-                  value: revoltFilter.id,
-                  label: revoltFilter.label,
-                  checked: revoltFilter.active,
-                  event: this.toggleCheckbox
-                });
-              })}
-          </ul>
-
-          <br />
-          <b>books</b>
-          <ul>
-            {this.props.filters
-              .filter(f => f.category === "books")
-              .map(bookFilter => {
-                return this.renderCheckbox({
-                  key: bookFilter.id,
-                  value: bookFilter.id,
-                  label: bookFilter.label,
-                  checked: bookFilter.active,
-                  event: this.toggleCheckbox
-                });
-              })}
-          </ul>
+          {this.props.filters.map(filterGroup => {
+            return (
+              <div className="filter-group" key={filterGroup.id}>
+                <b>{filterGroup.label}</b>
+                <ul>
+                  {" "}
+                  {filterGroup.options.map(option => {
+                    return this.renderCheckbox({
+                      key: option.id,
+                      value: option.id,
+                      label: option.label,
+                      type: filterGroup.type,
+                      checked: option.active,
+                      event: this.toggleCheckbox
+                    });
+                  })}
+                </ul>
+              </div>
+            );
+          })}
           <br />
 
           <b>legend</b>
