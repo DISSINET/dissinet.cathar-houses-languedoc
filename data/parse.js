@@ -42,7 +42,7 @@ readSpreadsheet("1yYLd2ARWbyPxH9m3ZD7mYnVJS0UArv_pTav5nP1T2NE", rows => {
         { id: "period1", fn: ys => ys.some(y => y < 1210) },
         { id: "period2", fn: ys => ys.some(y => y < 1220 && y > 1209) },
         { id: "period3", fn: ys => ys.some(y => y < 1230 && y > 1219) },
-        { id: "period4", fn: ys => ys.some(y => y < 1240 && y > 1229) },
+        { id: "period4", fn: ys => ys.some(y => y > 1229) },
         { id: "period0", fn: ys => ys.length === 0 }
       ];
 
