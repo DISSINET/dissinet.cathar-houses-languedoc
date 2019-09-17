@@ -100,7 +100,7 @@ export default class MapComponent extends React.Component<Props> {
 
   tooltip(record) {
     return (
-      <div>
+      <div key={record.id}>
         [{record.id}] <b>{record.placename}</b>
         <br />
         <i className="icon icon-clock"></i>{" "}
@@ -108,7 +108,7 @@ export default class MapComponent extends React.Component<Props> {
         <br />
         {record.sources.map(source => {
           return (
-            <div>
+            <div key={source}>
               <i className="icon icon-scroll"></i> {source}
             </div>
           );
@@ -120,7 +120,7 @@ export default class MapComponent extends React.Component<Props> {
   render() {
     const iconSize = [25, 25];
     return (
-      <div className="map" data-testid="map-wrapper">
+      <div key="map" className="map" data-testid="map-wrapper">
         <Map
           center={this.props.center}
           zoom={this.props.zoom}
@@ -161,11 +161,13 @@ export default class MapComponent extends React.Component<Props> {
           {this.props.zoom < 11 ? (
             <LayerGroup className="awmc">
               <TileLayer
+                key="awmc"
                 maxNativeZoom={15}
                 attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
                 url="http://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
               />
               <TileLayer
+                key="stamen"
                 attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}{r}.{ext}"
                 subdomains="abcd"
