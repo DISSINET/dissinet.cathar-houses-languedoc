@@ -125,7 +125,8 @@ export default class MapComponent extends React.Component<Props> {
           center={this.props.center}
           zoom={this.props.zoom}
           maxZoom={16}
-          minZoom={7}
+          minZoom={9}
+          maxBounds={[[40, -2], [48, 6]]}
           ref={this.mapRef}
           onViewportChanged={this.handleMapMove.bind(this)}
         >
