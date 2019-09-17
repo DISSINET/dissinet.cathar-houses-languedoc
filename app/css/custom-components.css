@@ -142,14 +142,6 @@ button.success {
     }
 
     .legend {
-      img {
-        width: 100%;
-        background: url("./../../assets/legend.png") no-repeat;
-        height: 12em;
-        background-repeat: round;
-        border: 2px solid white;
-        border: 0;
-      }
     }
     .panel-content {
       position: absolute;
@@ -163,6 +155,18 @@ button.success {
 
   .panel-footer {
     width: var(--panel-w);
+  }
+
+  .map,
+  .panel {
+    .fa-map-marker {
+      &.active {
+        color: config("colors.muni");
+      }
+      &.inactive {
+        color: config("colors.black");
+      }
+    }
   }
 
   .map {
@@ -187,13 +191,6 @@ button.success {
         0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
         0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white,
         0px 0px 2px white, 0px 0px 2px white;
-
-      &.active {
-        color: config("colors.muni");
-      }
-      &.inactive {
-        color: config("colors.black");
-      }
     }
 
     .leaflet-tile-container {
