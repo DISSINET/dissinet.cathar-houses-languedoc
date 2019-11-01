@@ -56,7 +56,7 @@ readSpreadsheet("1yYLd2ARWbyPxH9m3ZD7mYnVJS0UArv_pTav5nP1T2NE", 0, rows => {
             .forEach(sourceRow => {
               sources.push({
                 id: sourceRow.id,
-                name: sourceRow.worknameenglish
+                name: sourceRow.shortname
               });
             });
 
