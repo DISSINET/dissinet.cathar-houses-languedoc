@@ -169,6 +169,12 @@ export default class MapComponent extends React.Component<Props> {
           {this.props.zoom < 11 ? (
             <LayerGroup className="awmc">
               <TileLayer
+                key="cassini"
+                maxNativeZoom={15}
+                attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
+                url="http://www.chartae-antiquae.cz/TMS/Francie/{z}/{x}/{y}.png"
+              />
+              <TileLayer
                 key="awmc"
                 maxNativeZoom={15}
                 attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
@@ -183,15 +189,24 @@ export default class MapComponent extends React.Component<Props> {
               />
             </LayerGroup>
           ) : (
-            <LayerGroup className="osm">
-              <TileLayer
-                attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
-                url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
-              />
-            </LayerGroup>
+            <TileLayer
+              key="cassini"
+              maxNativeZoom={15}
+              attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
+              url="http://www.chartae-antiquae.cz/TMS/Francie/{z}/{x}/{y}.png"
+            />
           )}
         </Map>
       </div>
     );
   }
 }
+
+/*
+            (<LayerGroup className="osm">
+              <TileLayer
+                attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+                url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+              />
+            </LayerGroup>)
+          */
