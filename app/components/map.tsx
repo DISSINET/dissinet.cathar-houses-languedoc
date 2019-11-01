@@ -9,6 +9,7 @@ import {
   Pane,
   Tooltip,
   LayerGroup,
+  LayersControl,
   ScaleControl
 } from "react-leaflet";
 
@@ -166,20 +167,30 @@ export default class MapComponent extends React.Component<Props> {
           </Pane>
 
           <ScaleControl />
-          {this.props.zoom < 11 ? (
-            <LayerGroup className="awmc">
-              <TileLayer
-                key="cassini"
-                maxNativeZoom={15}
-                attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
-                url="http://www.chartae-antiquae.cz/TMS/Francie/{z}/{x}/{y}.png"
-              />
+          <LayersControl>
+            <LayersControl.BaseLayer name="awmc" checked={true}>
               <TileLayer
                 key="awmc"
                 maxNativeZoom={15}
                 attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
                 url="http://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
               />
+            </LayersControl.BaseLayer>
+            <LayersControl.BaseLayer name="cassini">
+              <TileLayer
+                key="cassini"
+                maxNativeZoom={15}
+                attribution="<a href='chartae-antiquae.cz'>chartae-antiquae.cz</a>"
+                url="http://www.chartae-antiquae.cz/TMS/Francie/{z}/{x}/{y}.png"
+              />
+            </LayersControl.BaseLayer>
+            <LayersControl.BaseLayer name="osm">
+              <TileLayer
+                attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+                url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+              />
+            </LayersControl.BaseLayer>
+            <LayersControl.Overlay name="labels" checked={true}>
               <TileLayer
                 key="stamen"
                 attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -187,15 +198,8 @@ export default class MapComponent extends React.Component<Props> {
                 subdomains="abcd"
                 ext="png"
               />
-            </LayerGroup>
-          ) : (
-            <TileLayer
-              key="cassini"
-              maxNativeZoom={15}
-              attribution="<a href='http://awmc.unc.edu/wordpress/'>Ancient World Mapping Center</a>"
-              url="http://www.chartae-antiquae.cz/TMS/Francie/{z}/{x}/{y}.png"
-            />
-          )}
+            </LayersControl.Overlay>
+          </LayersControl>
         </Map>
       </div>
     );
