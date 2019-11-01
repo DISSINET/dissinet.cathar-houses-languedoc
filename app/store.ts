@@ -68,7 +68,7 @@ export default class AppStore {
   ];
 
   constructor(data) {
-    this._center = observable.box([43.5, 2]);
+    this._center = observable.box([43.2, 2]);
     this._zoom = observable.box(9);
     this._extent = observable.box([]);
     this._welcome = observable.box(true);
