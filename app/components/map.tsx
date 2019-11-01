@@ -168,7 +168,10 @@ export default class MapComponent extends React.Component<Props> {
 
           <ScaleControl />
           <LayersControl>
-            <LayersControl.BaseLayer name="awmc" checked={true}>
+            <LayersControl.BaseLayer
+              name="Ancient World Mapping Center"
+              checked={true}
+            >
               <TileLayer
                 key="awmc"
                 maxNativeZoom={15}
@@ -176,7 +179,7 @@ export default class MapComponent extends React.Component<Props> {
                 url="http://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="cassini">
+            <LayersControl.BaseLayer name="Map of France, Jean-Dominique Cassini">
               <TileLayer
                 key="cassini"
                 maxNativeZoom={15}
@@ -184,13 +187,13 @@ export default class MapComponent extends React.Component<Props> {
                 url="http://www.chartae-antiquae.cz/TMS/Francie/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="osm">
+            <LayersControl.BaseLayer name="Open Street Maps">
               <TileLayer
                 attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
                 url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
-            <LayersControl.Overlay name="labels" checked={true}>
+            <LayersControl.Overlay name="Stamen labels" checked={true}>
               <TileLayer
                 key="stamen"
                 attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
