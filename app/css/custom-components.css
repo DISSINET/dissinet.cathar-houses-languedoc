@@ -53,6 +53,21 @@ button.success {
   }
 }
 
+.leaflet-container {
+  .leaflet-tooltip-pane {
+    .leaflet-tooltip {
+      white-space: normal;
+      margin-right: 1em;
+      max-width: 20em;
+      div {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        width: 19em;
+      }
+    }
+  }
+}
+
 .app-wrapper {
   .hero {
     background-position-x: -1px;
