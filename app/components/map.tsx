@@ -101,7 +101,7 @@ export default class MapComponent extends React.Component<Props> {
   tooltip(record) {
     return (
       <div key={record.id}>
-        [{record.id}] <b>{record.placename}</b>
+        [{record.id}] <b className="name">{record.placename}</b>
         <br />
         <i className="icon icon-clock"></i>{" "}
         {record.years.join(", ") || "no data"}
@@ -138,7 +138,11 @@ export default class MapComponent extends React.Component<Props> {
                   position={record.geo.geometry.coordinates}
                   icon={this.icon("fa fa-map-marker active", "", iconSize)}
                 >
-                  <Tooltip direction="right">{this.tooltip(record)}</Tooltip>
+                  <Tooltip direction="right">
+                    <div className="tooltip-content active">
+                      {this.tooltip(record)}
+                    </div>
+                  </Tooltip>
                 </Marker>
               );
             })}
@@ -151,7 +155,11 @@ export default class MapComponent extends React.Component<Props> {
                   position={record.geo.geometry.coordinates}
                   icon={this.icon("fa fa-map-marker inactive", "", iconSize)}
                 >
-                  <Tooltip direction="right">{this.tooltip(record)}</Tooltip>
+                  <Tooltip direction="right">
+                    <div className="tooltip-content inactive">
+                      {this.tooltip(record)}
+                    </div>
+                  </Tooltip>
                 </Marker>
               );
             })}

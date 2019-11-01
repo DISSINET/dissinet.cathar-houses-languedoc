@@ -59,7 +59,11 @@ button.success {
       white-space: normal;
       margin-right: 1em;
       max-width: 20em;
-      div {
+      .tooltip-content {
+        &.active .name {
+          color: config("colors.muni");
+        }
+
         overflow-wrap: break-word;
         word-wrap: break-word;
         width: 19em;
