@@ -57,71 +57,163 @@ export default class WelcomeComponent extends React.Component<Props> {
           </button>
           <div className="px-6 py-4">
             <p>
-              This interactive map is based on the{" "}
-              <span className="text-bold">Lollard trials.</span> It shows the
-              <span className="text-bold"> places of origin</span> of English
-              dissidents under investigation for taking part in{" "}
-              <span className="text-bold">the revolts of 1414 or 1431</span>,
-              related to Lollardy, or holding various{" "}
-              <span className="text-bold">heterodox opinions</span> that are
-              commonly referred to as Lollard. In addition, it shows in which of
-              these places the owners of{" "}
+              This interactive map shows{" "}
+              <span className="text-bold">settlements</span> in Languedoc in
+              which Cathar religious, known as{" "}
+              <span className="text-italic">heretici</span> in the inquisitorial
+              registers, are attested to have dwelt{" "}
               <span className="text-bold">
-                unauthorised English religious books
+                publicly in houses they owned or rented.
               </span>{" "}
-              were uncovered.{" "}
-            </p>
-
-            <p className=" indent">
-              {" "}
-              A total of{" "}
-              <span className="text-bold">
-                {this.props.data.length} sites
-              </span>{" "}
-              were transferred from the{" "}
-              <span className="text-italic">Atlas zur Kirchengeschichte</span>{" "}
-              by Jedin et al. (data compiled by M. Lambert based on the analysis
-              of trial records by J. A. F. Thomson and J. Fines). The map shows
-              all sites from Jedin et al., including those mentioned only in the
-              accompanying text (by M. Lambert), but excluding three sites which
-              could not be localised with enough certainty. The plotted sites
-              indicate only the presence of suspected Lollards and revolt
-              participants, not their numbers or importance.{" "}
-            </p>
-
-            <p className=" indent">
-              {" "}
-              The <span className="text-bold">period covered</span> ranges from{" "}
-              <span className="text-bold">1414</span> until{" "}
-              <span className="text-bold">1522</span>. After this date, it
-              becomes hard to distinguish between Lollardy and the various forms
-              of Protestantism that came over from the continent. The map plots
-              only those locations mentioned in extant trial records and should
-              not, of course, be considered a “complete” map of Lollardy.{" "}
+              The <span className="text-bold">period covered</span> ranges from
+              the oldest memory going as far back as{" "}
+              <span className="text-bold">1175</span> up until the fall of the{" "}
+              <span className="text-italic">castrum</span> of Montségur in{" "}
+              <span className="text-bold">1244.</span> After Montségur, no
+              evidence can be found for the survival of overt Cathar houses in
+              Languedoc; Cathar Christians could no longer live publicly and
+              were forced to live as itinerant fugitives. This change was
+              already ongoing in the 1230s.
             </p>
 
             <p className="indent">
-              {" "}
-              The map can be filtered using these variables: participation in{" "}
-              <span className="text-bold">the Oldcastle Revolt of 1414</span>,
-              involvement in the smaller{" "}
-              <span className="text-bold">Lollard insurrection of 1431</span>{" "}
-              originating in London, and unauthorised use of{" "}
-              <span className="text-bold">English religious books</span>. Unlike
-              Lambert, we do not draw a clear line between the presence of
-              Lollards and people related to the revolts for other possible
-              reasons, but this distinction is preserved in the dataset.
+              <span className="text-bold">“Houses of heretics”.</span> The
+              expression “houses of heretics”, well-attested in inquisitorial
+              records, describes houses in which small same-gender communities
+              of Cathar religious lived, worked, and performed their religion.
+              Sometimes these households included other people too, mostly young
+              relatives or craft apprentices. As Brenon ([1997]{" "}
+              <a
+                href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/EJ7IXBEC/"
+                className="link"
+                target="_blank"
+              >
+                2003
+              </a>
+              : 217-218) and subsequently Pegg (
+              <a
+                href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/6HZYXQPK/"
+                className="link"
+                target="_blank"
+              >
+                2001
+              </a>
+              : 117-120) have shown, the category of “houses of heretics” is one
+              with fluid borders. Some were simply houses whose owners had
+              decided to receive a Cathar baptism (a laying on of hands called a{" "}
+              <span className="text-italic">consolament</span>) and live
+              together with a Cathar family member or friend of the same gender
+              (for rare mixed-gender exceptions, cf. Brenon [1997]{" "}
+              <a
+                href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/EJ7IXBEC/"
+                className="link"
+                target="_blank"
+              >
+                2003
+              </a>
+              : 218-219). In much rarer instances, the “houses of heretics” were
+              larger dwellings, sometimes containing workshops where apprentices
+              were became accustomed to dissident culture as well as learning a
+              craft (cf. Kaelber,{" "}
+              <a
+                href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/2PTDHNQN/"
+                className="link"
+                target="_blank"
+              >
+                2003
+              </a>
+              ).
             </p>
 
             <p className="indent">
-              The <span className="text-bold">info box</span> under each point
-              on the map displays the place name and lists all the years to
-              which evidence concerning heresy or participation in revolts
-              relates. The list also includes years which do not appear in the
-              source map and are only mentioned in the accompanying text by M.
-              Lambert. Some years are marked by an asterisk (*) indicating that
-              precise locality is not known, only the diocese.
+              <span className="text-bold">Criteria.</span> In this dataset and
+              map, settlements have been included if Languedocian inquisition
+              records describe
+              <span className="text-bold">heretics living publicly</span> in
+              these locations. An explicit mention of houses being the heretics’{" "}
+              <span className="text-italic">own</span> has not been required.
+              However, settlements where the sources speak of heretics staying
+              in somebody else’s house, or simply being publicly seen or met,
+              have not been not included. Another criterion has been the
+              explicit mention, or very reliable inference, of a specific
+              settlement, not just of a region: the mentions of regions
+              (Caramanès; the region of Saint-Félix) are covered in the dataset
+              but do not appear on the map.
             </p>
+
+            <p className="indent">
+              <span className="text-bold">Dataset.</span> The{" "}
+              <a
+                href="https://docs.google.com/spreadsheets/d/1yYLd2ARWbyPxH9m3ZD7mYnVJS0UArv_pTav5nP1T2NE/edit?usp=sharing"
+                className="link"
+                target="_blank"
+              >
+                dataset
+              </a>{" "}
+              on which the map is based constitutes the most extensive list of
+              settlements with “houses of heretics” in Languedoc available to
+              date. The initial idea was to only integrate, restructure, and
+              geocode the lists by Duvernoy (
+              <a
+                href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/EJ7IXBEC/"
+                className="link"
+                target="_blank"
+              >
+                1976
+              </a>
+              : 231-232) and Roche (
+              <a
+                href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/4XXKSSVT/"
+                className="link"
+                target="_blank"
+              >
+                2005
+              </a>
+              : 200-201). It turned out, however, that the data required
+              significant expansion (ca. 25 more settlements, i.e. one third of
+              the total number, have been discovered in the course of our
+              research). Also many dates and specific references to sources were
+              added. However, even after this expansion the dataset does not
+              give a complete picture of settlements that contained “houses of
+              heretics”. It is a result of ongoing work, and presents several
+              coverage biases, some inescapable, other less so: the effective
+              reach of inquisitorial tribunals; the coverage provided of extant
+              evidence; the state of modern editions of Languedocian
+              inquisitorial records; and the almost exclusive focus on Toulouse
+              ms. 609 in our supplementing of the lists provided by Duvernoy and
+              Roche.
+            </p>
+            <p className="indent">
+              <span className="text-bold">Map.</span> The map can be{" "}
+              <span className="text-bold">filtered</span> by periods. These
+              broadly correspond to the changing political circumstances in
+              which Cathar Christianity operated: the pre-Crusade situation
+              (until 1209); the 1210s; the 1220s; and the final period in which
+              the “houses of heretics” are attested, the years between the
+              Treaty of Paris (1229) and the fall of Montségur (1244) when
+              inquisitors were already operating in the region. All settlements
+              remain displayed, but those where there is evidence for Cathar
+              religious living publicly in the selected period are highlighted
+              in blue. The <span className="text-bold">info box</span> under
+              each map symbol displays the place name, the list of attesting{" "}
+              <span className="text-bold">sources</span> (precise folio
+              references are available in the dataset), and all the{" "}
+              <span className="text-bold">years</span> for which there is
+              evidence of the house’s existence. If multiple pieces of evidence
+              relate to one year, the year appears more than once in the list,
+              thus giving an indicator of the corroboration of evidence by
+              multiple witnesses: this can be regarded as fair-enough proxy for
+              the intensity of activity. However, this is a work-in-progress:
+              the list of dates is far from exhaustive and is affected by the
+              above-mentioned coverage biases. Therefore, any conclusions
+              concerning spatiotemporal patterns should be made with
+              discernment. Also the precise years must be treated with caution
+              due to both the limitations of witness memory and the way in which
+              dates were recorded. For example, the overrepresentation of years
+              ending at 5, 6, 0 or 1 is largely an artifact of notarial rounding
+              in Toulouse ms. 609 (1245-1246).
+            </p>
+            <div className="newline"></div>
 
             <ul>
               <li>
@@ -129,30 +221,14 @@ export default class WelcomeComponent extends React.Component<Props> {
                   <i className="mx-2 icon icon-book" />
                 </span>
                 <span>
-                  Data sources:{" "}
-                  <a
-                    title="bibliographic record in Zotero"
-                    target="_blank"
-                    href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/4Z4PVWYH/"
-                  >
-                    Jedin et al., 1970
-                  </a>
-                  ;{" "}
-                  <a
-                    title="bibliographic record in Zotero"
-                    target="_blank"
-                    href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/6IPZEDBP/"
-                  >
-                    Thomson, 1970
-                  </a>
-                  ;{" "}
-                  <a
-                    title="bibliographic record in Zotero"
-                    target="_blank"
-                    href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/YUYEVYKT/"
-                  >
-                    Fines, 1964.
-                  </a>
+                {/* prettier-ignore */}  
+                  Data sources: Toulouse, Bibliothèque municipale, ms. 609 (
+                    edition by Evans & Sherwood, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/DP9WFZMW/" className="link" target="_blank">n.d.</a>; 
+                    Duvernoy, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/45PKPXYV/" className="link" target="_blank">2002</a>; 
+                    Rehr, <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/Q5YHWC2S/" className="link" target="_blank">2019</a>
+                  ); 
+                  Duvernoy, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/EJ7IXBEC/" className="link" target="_blank">1976</a>: 231-232; 
+                  Roche, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/4XXKSSVT/" className="link" target="_blank">2005</a>.
                 </span>
               </li>
               <li>
@@ -165,7 +241,7 @@ export default class WelcomeComponent extends React.Component<Props> {
                 <span>
                   <i className="mx-2 icon icon-layer-group" />
                 </span>
-                <span>Digitized and geocoded by Jan Král.</span>
+                <span>Data by David Zbíral.</span>
               </li>
               <li>
                 <span>
@@ -185,31 +261,27 @@ export default class WelcomeComponent extends React.Component<Props> {
               </li>
             </ul>
             <p>
-              <b>Recommended citation:</b> Král, J., Mertel, A., & Zbíral, D.
-              (2019). Lollards, 1414–1522: Places of origin of Lollards,
-              unauthorized book owners, and participants in revolts related to
-              Lollardy based on their trials. Dissident Networks Project
-              (DISSINET). Retrieved{" "}
-              {now.toLocaleDateString("en-US", dateOptions)}, from
-              https://dissinet.cz/publications/maps/lollards.
-            </p>
+              <span className="text-bold">Recommended citation:</span>
+               Zbíral, D., & Mertel, A. (2019). Houses of heretics: Cathar religious houses in Languedoc, 1175–1244 (v. 1.0). Dissident Networks Project (DISSINET). Retrieved  {now.toLocaleDateString("en-US", dateOptions)}, from https://dissinet.cz/publications/maps/cathar-houses-languedoc-1-0.</p>
           </div>
           <div className="footer w-100 bg-grey p-4 table-row">
             <div className="table-cell p-4 w-2/3 align-top paragraph small text-sm mr-32">
               <i>
-                The digitization of this map is a part of the{" "}
-                <a
-                  title="dissinet webpage"
-                  target="_blank"
-                  href="https://dissinet.cz"
-                >
-                  Dissident Networks Project (DISSINET)
-                </a>
-                . The project received funding from the Czech Science Foundation
-                (project No. GX19-26975X “Dissident Religious Cultures in
-                Medieval Europe from the Perspective of Social Network Analysis
-                and Geographic Information Systems”). We gratefully acknowledge
-                this financial support.
+                <p>
+                  This map and dataset are outputs of the{" "}
+                  <a
+                    href="https://dissinet.cz/"
+                    className="link"
+                    target="_blank"
+                  >
+                    Dissident Networks Project (DISSINET)
+                  </a>
+                  . The project received funding from the Czech Science
+                  Foundation (project No. GX19-26975X “Dissident Religious
+                  Cultures in Medieval Europe from the Perspective of Social
+                  Network Analysis and Geographic Information Systems”). We
+                  gratefully acknowledge this financial support.
+                </p>
               </i>
             </div>
             <div className="table-cell align-bottom text-right">
