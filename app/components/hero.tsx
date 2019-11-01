@@ -31,7 +31,8 @@ export default class WelcomeComponent extends React.Component<Props> {
       >
         <h2 className="heading text-white font-bold">Houses of heretics</h2>
         <h4 className="subheading text-white font-medium">
-          Cathar religious houses in Languedoc
+          Cathar religious houses in Languedoc, 1175–1244 (v.{" "}
+          {window["version"]})
         </h4>
       </div>
     );
