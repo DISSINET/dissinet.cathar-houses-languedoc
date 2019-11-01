@@ -40,20 +40,20 @@ export default class AppStore {
           fn: d => d.period1
         },
         {
-          id: "1210-1219",
-          label: "1210-1219",
+          id: "1210–1219",
+          label: "1210–1219",
           active: true,
           fn: d => d.period2
         },
         {
-          id: "1220-1229",
-          label: "1220-1229",
+          id: "1220–1229",
+          label: "1220–1229",
           active: true,
           fn: d => d.period3
         },
         {
-          id: "1230-1244",
-          label: "1230-1244",
+          id: "1230–1244",
+          label: "1230–1244",
           active: true,
           fn: d => d.period4
         },
