@@ -5,14 +5,17 @@ import * as ReactDOM from "react-dom";
 import App from "./components/app";
 import Store from "./store";
 
-import data from "./../data/data.json";
+import data from "./../data/data";
 console.log(data);
 
-window["version"] = process.env.npm_package_version;
-
-window["store"] = new Store(data);
+var globals = {
+  store: new Store(data),
+  version: process.env.npm_package_version
+};
 
 ReactDOM.render(
-  React.createElement(App, { store: window["store"] }),
+  React.createElement(App, { store: globals.store }),
   document.getElementById("app")
 );
+
+export { globals };

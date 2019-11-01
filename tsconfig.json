@@ -6,6 +6,7 @@
     "noImplicitAny": false,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "baseUrl": "./app",
     "paths": {
       "*": ["./app/*"]
