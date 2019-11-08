@@ -179,7 +179,7 @@ export default class MapComponent extends React.Component<Props> {
                 url="http://a.tiles.mapbox.com/v3/isawnyu.map-knmctlkh/{z}/{x}/{y}.png"
               />
             </LayersControl.BaseLayer>
-            <LayersControl.BaseLayer name="Map of France, Jean-Dominique Cassini">
+            <LayersControl.BaseLayer name="Cassini map">
               <TileLayer
                 key="cassini"
                 maxNativeZoom={15}
