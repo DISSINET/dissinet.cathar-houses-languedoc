@@ -164,9 +164,8 @@ button.success {
     }
     .panel-content {
       position: absolute;
-      top: 170px;
+      top: 9em;
       width: 100%;
-      top: 170px;
       bottom: 75px;
       overflow-y: auto;
     }
