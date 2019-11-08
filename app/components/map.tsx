@@ -167,7 +167,7 @@ export default class MapComponent extends React.Component<Props> {
           </Pane>
 
           <ScaleControl />
-          <LayersControl>
+          <LayersControl position="bottomright">
             <LayersControl.BaseLayer
               name="Ancient World Mapping Center"
               checked={true}
