@@ -1,6 +1,8 @@
 import * as React from "react";
 import { propTypes } from "mobx-react";
 
+import { globals } from "./../index";
+
 import Hero from "./hero";
 
 type Props = {
@@ -262,7 +264,7 @@ export default class WelcomeComponent extends React.Component<Props> {
             </ul>
             <p>
               <span className="text-bold">Recommended citation:</span>
-               Zbíral, D., & Mertel, A. (2019). Houses of heretics: Cathar religious houses in Languedoc, 1175–1244 (v. 1.0). Dissident Networks Project (DISSINET). Retrieved  {now.toLocaleDateString("en-US", dateOptions)}, from https://dissinet.cz/publications/maps/cathar-houses-languedoc-1-0.</p>
+               Zbíral, D., & Mertel, A. (2019). Houses of heretics: Cathar religious houses in Languedoc, 1175–1244 (v. {globals.version}). Dissident Networks Project (DISSINET). Retrieved  {now.toLocaleDateString("en-US", dateOptions)}, from https://dissinet.cz/publications/maps/cathar-houses-languedoc</p>
           </div>
           <div className="footer w-100 bg-grey p-4 table-row">
             <div className="table-cell p-4 w-2/3 align-top paragraph small text-sm mr-32">
