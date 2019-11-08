@@ -130,7 +130,7 @@ export default class WelcomeComponent extends React.Component<Props> {
             <p className="indent">
               <span className="text-bold">Criteria.</span> In this dataset and
               map, settlements have been included if Languedocian inquisition
-              records describe
+              records describe 
               <span className="text-bold">heretics living publicly</span> in
               these locations. An explicit mention of houses being the heretics’{" "}
               <span className="text-italic">own</span> has not been required.
@@ -212,7 +212,7 @@ export default class WelcomeComponent extends React.Component<Props> {
               discernment. Also the precise years must be treated with caution
               due to both the limitations of witness memory and the way in which
               dates were recorded. For example, the overrepresentation of years
-              ending at 5, 6, 0 or 1 is largely an artifact of notarial rounding
+              ending at 5, 6, 0 or 1 is largely an artifact of rounding
               in Toulouse ms. 609 (1245-1246).
             </p>
             <div className="newline"></div>
@@ -224,8 +224,7 @@ export default class WelcomeComponent extends React.Component<Props> {
                 </span>
                 <span>
                 {/* prettier-ignore */}  
-                  Data sources: Toulouse, Bibliothèque municipale, ms. 609 (
-                    edition by Evans & Sherwood, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/DP9WFZMW/" className="link" target="_blank">n.d.</a>; 
+                  Data sources: Toulouse, Bibliothèque municipale, ms. 609 (edition by Evans & Sherwood, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/DP9WFZMW/" className="link" target="_blank">n.d.</a>; 
                     Duvernoy, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/45PKPXYV/" className="link" target="_blank">2002</a>; 
                     Rehr, <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/Q5YHWC2S/" className="link" target="_blank">2019</a>
                   ); 
@@ -263,7 +262,7 @@ export default class WelcomeComponent extends React.Component<Props> {
               </li>
             </ul>
             <p>
-              <span className="text-bold">Recommended citation:</span>
+              <span className="text-bold">Recommended citation: </span>
                Zbíral, D., & Mertel, A. (2019). Houses of heretics: Cathar religious houses in Languedoc, 1175–1244 (v. {globals.version}). Dissident Networks Project (DISSINET). Retrieved  {now.toLocaleDateString("en-US", dateOptions)}, from https://dissinet.cz/publications/maps/cathar-houses-languedoc</p>
           </div>
           <div className="footer w-100 bg-grey p-4 table-row">
