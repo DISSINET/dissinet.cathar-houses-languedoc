@@ -13,7 +13,7 @@ export default class AppStore {
   defaultFilters = [
     {
       id: "period-mode",
-      label: "Period - mode",
+      label: "Period – mode",
       type: "radio",
       options: [
         {
