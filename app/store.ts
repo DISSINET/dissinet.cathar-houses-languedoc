@@ -180,7 +180,16 @@ export default class AppStore {
       }
     }
 
-    // TODO: implement filter logic
+    // and option exception
+    if (optionId === "and") {
+      const periodTime = newFilters.find(f => f.id === "period-time");
+      if (periodTime) {
+        const noTime = periodTime.options.find(o => o.id === "nodata");
+        if (noTime) {
+          noTime.active = false;
+        }
+      }
+    }
 
     console.log(newFilters);
 
