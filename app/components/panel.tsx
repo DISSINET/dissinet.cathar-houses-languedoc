@@ -118,7 +118,7 @@ export default class PanelComponent extends React.Component<Props> {
               info
             </button>
             <a
-              href="https://docs.google.com/spreadsheets/d/1yYLd2ARWbyPxH9m3ZD7mYnVJS0UArv_pTav5nP1T2NE/edit#gid=0"
+              href="https://docs.google.com/spreadsheets/d/1yYLd2ARWbyPxH9m3ZD7mYnVJS0UArv_pTav5nP1T2NE/edit?usp=sharing"
               target="_blank"
             >
               <button className="text-base primary">
