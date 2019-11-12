@@ -115,8 +115,8 @@ export default class WelcomeComponent extends React.Component<Props> {
               </a>
               : 218-219). In much rarer instances, the “houses of heretics” were
               larger dwellings, sometimes containing workshops where apprentices
-              were became accustomed to dissident culture as well as learning a
-              craft (cf. Kaelber,{" "}
+              became accustomed to dissident culture as well as learning a craft
+              (cf. Kaelber,{" "}
               <a
                 href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/2PTDHNQN/"
                 className="link"
@@ -130,8 +130,8 @@ export default class WelcomeComponent extends React.Component<Props> {
             <p className="indent">
               <span className="text-bold">Criteria.</span> In this dataset and
               map, settlements have been included if Languedocian inquisition
-              records describe 
-              <span className="text-bold">heretics living publicly</span> in
+              records describe
+              <span className="text-bold"> heretics living publicly</span> in
               these locations. An explicit mention of houses being the heretics’{" "}
               <span className="text-italic">own</span> has not been required.
               However, settlements where the sources speak of heretics staying
@@ -212,8 +212,8 @@ export default class WelcomeComponent extends React.Component<Props> {
               discernment. Also the precise years must be treated with caution
               due to both the limitations of witness memory and the way in which
               dates were recorded. For example, the overrepresentation of years
-              ending at 5, 6, 0 or 1 is largely an artifact of rounding
-              in Toulouse ms. 609 (1245-1246).
+              ending at 5, 6, 0 or 1 is largely an artifact of rounding in
+              Toulouse ms. 609 (1245-1246).
             </p>
             <div className="newline"></div>
 
@@ -223,13 +223,49 @@ export default class WelcomeComponent extends React.Component<Props> {
                   <i className="mx-2 icon icon-book" />
                 </span>
                 <span>
-                {/* prettier-ignore */}  
-                  Data sources: Toulouse, Bibliothèque municipale, ms. 609 (edition by Evans & Sherwood, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/DP9WFZMW/" className="link" target="_blank">n.d.</a>; 
-                    Duvernoy, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/45PKPXYV/" className="link" target="_blank">2002</a>; 
-                    Rehr, <a href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/Q5YHWC2S/" className="link" target="_blank">2019</a>
-                  ); 
-                  Duvernoy, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/EJ7IXBEC/" className="link" target="_blank">1976</a>: 231-232; 
-                  Roche, <a href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/4XXKSSVT/" className="link" target="_blank">2005</a>.
+                  {/* prettier-ignore */}
+                  Data sources: Toulouse, Bibliothèque municipale, ms. 609
+                  (edition by Evans & Sherwood,{" "}
+                  <a
+                    href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/DP9WFZMW/"
+                    className="link"
+                    target="_blank"
+                  >
+                    n.d.
+                  </a>
+                  ; Duvernoy,{" "}
+                  <a
+                    href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/45PKPXYV/"
+                    className="link"
+                    target="_blank"
+                  >
+                    2002
+                  </a>
+                  ; Rehr,{" "}
+                  <a
+                    href="https://www.zotero.org/groups/446972/david_zbiral_bibliography/items/itemKey/Q5YHWC2S/"
+                    className="link"
+                    target="_blank"
+                  >
+                    2019
+                  </a>
+                  ); Duvernoy,{" "}
+                  <a
+                    href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/EJ7IXBEC/"
+                    className="link"
+                    target="_blank"
+                  >
+                    1976
+                  </a>
+                  : 231-232; Roche,{" "}
+                  <a
+                    href="https://www.zotero.org/groups/446972/dissident_networks_project/items/itemKey/4XXKSSVT/"
+                    className="link"
+                    target="_blank"
+                  >
+                    2005
+                  </a>
+                  .
                 </span>
               </li>
               <li>
@@ -263,7 +299,12 @@ export default class WelcomeComponent extends React.Component<Props> {
             </ul>
             <p>
               <span className="text-bold">Recommended citation: </span>
-               Zbíral, D., & Mertel, A. (2019). Houses of heretics: Cathar religious houses in Languedoc, 1175–1244 (v. {globals.version}). Dissident Networks Project (DISSINET). Retrieved  {now.toLocaleDateString("en-US", dateOptions)}, from https://dissinet.cz/publications/maps/cathar-houses-languedoc</p>
+              Zbíral, D., & Mertel, A. (2019). Houses of heretics: Cathar
+              religious houses in Languedoc, 1175–1244 (v. {globals.version}).
+              Dissident Networks Project (DISSINET). Retrieved{" "}
+              {now.toLocaleDateString("en-US", dateOptions)}, from
+              https://dissinet.cz/publications/maps/cathar-houses-languedoc
+            </p>
           </div>
           <div className="footer w-100 bg-grey p-4 table-row">
             <div className="table-cell p-4 w-2/3 align-top paragraph small text-sm mr-32">
