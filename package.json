@@ -13,11 +13,7 @@
     "build": "npm run clean-dist && parcel build app/index.html --no-cache --public-url ./",
     "deploy": "rsync -avz dist/ adamm@10.38.208.11:~/../../var/www/html/maps/cathar-houses-languedoc/ --delete",
     "build-deploy": "npm run build && npm run deploy",
-    "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.js -o ./build/styles.css",
-    "test": "jest --detectOpenHandles",
-    "test-unit": "jest --detectOpenHandles --testPathPattern=\".*/tests/unit/.*.spec.ts\" ",
-    "test-e2e": "jest --detectOpenHandles --testPathPattern=\".*/tests/e2e/.*.spec.ts\" ",
-    "test-component": "jest --detectOpenHandles --updateSnapshot --testPathPattern=\".*/tests/component/.*.spec.tsx\" "
+    "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.js -o ./build/styles.css"
   },
   "repository": {
     "type": "git",
