@@ -51,5 +51,7 @@
     "turf": "^3.0.14",
     "typescript": "^3.7.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
 }
