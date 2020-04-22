@@ -55,18 +55,5 @@
     "turf": "^3.0.14",
     "typescript": "^3.7.3"
   },
-  "devDependencies": {
-    "@types/enzyme": "^3.10.5",
-    "@types/enzyme-adapter-react-16": "^1.0.6",
-    "@types/jest": "^24.9.1",
-    "@types/jest-environment-puppeteer": "^4.3.1",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
-    "enzyme-to-json": "^3.4.3",
-    "gts": "^1.1.2",
-    "jest": "^24.9.0",
-    "jest-environment-puppeteer": "^4.4.0",
-    "puppeteer": "^1.20.0",
-    "ts-jest": "^24.2.0"
-  }
+  "devDependencies": {}
 }
