@@ -43,7 +43,7 @@ export default class WelcomeComponent extends React.Component<Props> {
     const dateOptions = {
       year: "numeric",
       month: "long",
-      day: "numeric"
+      day: "numeric",
     };
     const now = new Date();
 
@@ -303,7 +303,10 @@ export default class WelcomeComponent extends React.Component<Props> {
               religious houses in Languedoc, 1175–1244 (v. {globals.version}).
               Dissident Networks Project (DISSINET). Retrieved{" "}
               {now.toLocaleDateString("en-US", dateOptions)}, from
-              https://dissinet.cz/publications/maps/cathar-houses-languedoc
+              <a href="https://dissinet.cz/maps/cathar-houses-languedoc">
+                https://dissinet.cz/maps/cathar-houses-languedoc
+              </a>
+              .
             </p>
           </div>
           <div className="footer w-100 bg-grey p-4 table-row">

@@ -1,6 +1,6 @@
 # Houses of heretics: Cathar religious houses in Languedoc, 1175–1244
 
-This interactive map shows **settlements** in Languedoc in which Cathar religious, known as _heretici_ in the inquisitorial registers, are attested to have dwelt **in houses they owned or rented**. The **period covered** ranges from the oldest memory going as far back as **1175** up until the fall of the _castrum_ of Montségur in **1244**. After Montségur, no evidence can be found for the survival of overt Cathar houses in Languedoc; Cathar Christians could no longer live publicly and were forced to live as itinerant fugitives. This change was already ongoing in the 1230s.
+This interactive [map](https://dissinet.cz/maps/cathar-houses-languedoc) shows **settlements** in Languedoc in which Cathar religious, known as _heretici_ in the inquisitorial registers, are attested to have dwelt **in houses they owned or rented**. The **period covered** ranges from the oldest memory going as far back as **1175** up until the fall of the _castrum_ of Montségur in **1244**. After Montségur, no evidence can be found for the survival of overt Cathar houses in Languedoc; Cathar Christians could no longer live publicly and were forced to live as itinerant fugitives. This change was already ongoing in the 1230s.
 
 ![house of heretics map screen](./assets/screen.png)
 
