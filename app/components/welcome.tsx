@@ -136,11 +136,11 @@ export default class WelcomeComponent extends React.Component<Props> {
               <span className="text-italic">own</span> has not been required.
               However, settlements where the sources speak of heretics staying
               in somebody else’s house, or simply being publicly seen or met,
-              have not been not included. Another criterion has been the
-              explicit mention, or very reliable inference, of a specific
-              settlement, not just of a region: the mentions of regions
-              (Caramanès; the region of Saint-Félix) are covered in the dataset
-              but do not appear on the map.
+              have not been included. Another criterion has been the explicit
+              mention, or very reliable inference, of a specific settlement, not
+              just of a region: the mentions of regions (Caramanès; the region
+              of Saint-Félix) are covered in the dataset but do not appear on
+              the map.
             </p>
 
             <p className="indent">
@@ -302,7 +302,7 @@ export default class WelcomeComponent extends React.Component<Props> {
               Zbíral, D., & Mertel, A. (2019). Houses of heretics: Cathar
               religious houses in Languedoc, 1175–1244 (v. {globals.version}).
               Dissident Networks Project (DISSINET). Retrieved{" "}
-              {now.toLocaleDateString("en-US", dateOptions)}, from
+              {now.toLocaleDateString("en-US", dateOptions)}, from{" "}
               <a href="https://dissinet.cz/maps/cathar-houses-languedoc">
                 https://dissinet.cz/maps/cathar-houses-languedoc
               </a>
