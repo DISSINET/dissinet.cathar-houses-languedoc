@@ -34,7 +34,7 @@
         "babel-core": "^6.26.3",
         "babel-preset-env": "^1.7.0",
         "font-awesome": "^4.7.0",
-        "google-spreadsheet": "^2.0.8",
+        "google-spreadsheet": "^3.1.15",
         "leaflet": "^1.6.0",
         "leaflet.markercluster": "^1.4.1",
         "mobx": "^5.15.1",
