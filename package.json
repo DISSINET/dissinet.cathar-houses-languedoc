@@ -1,57 +1,57 @@
 {
-  "name": "dissinet.cathar-houses-languedoc",
-  "version": "1.0.5",
-  "description": "Houses of heretics: Cathar religious houses in Languedoc",
-  "author": "Adam Mertel <mertel.adam@gmail.com> | David Zbíral <david.zbiral@post.cz >",
-  "license": "ISC",
-  "homepage": "https://github.com/DISSINET/dissinet.cathar-houses-languedoc",
-  "main": "index.js",
-  "scripts": {
-    "clean-dist": "rm -f -r -d dist",
-    "start": "parcel app/index.html --open --no-cache",
-    "parse": "node data/parse.js",
-    "build": "npm run clean-dist && parcel build app/index.html --no-cache --public-url ./",
-    "deploy": "rsync -avz dist/ adamm@10.16.30.211:~/../../var/www/html/maps/cathar-houses-languedoc/ --delete",
-    "build-deploy": "npm run build && npm run deploy",
-    "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.js -o ./build/styles.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DISSINET/dissinet.cathar-houses-languedoc.git"
-  },
-  "keywords": [
-    "boilerplate",
-    "leaflet",
-    "react-leaflet",
-    "mobx"
-  ],
-  "dependencies": {
-    "@babel/preset-react": "^7.7.4",
-    "@babel/preset-typescript": "^7.7.4",
-    "@types/node": "^12.12.19",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "font-awesome": "^4.7.0",
-    "google-spreadsheet": "^2.0.8",
-    "leaflet": "^1.6.0",
-    "leaflet.markercluster": "^1.4.1",
-    "mobx": "^5.15.1",
-    "mobx-react": "^5.4.4",
-    "postcss-custom-properties": "^8.0.11",
-    "postcss-import": "^12.0.1",
-    "postcss-nested": "^4.2.1",
-    "postcss-preset-env": "^6.7.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-leaflet": "^2.6.1",
-    "sass": "^1.23.7",
-    "tailwindcss": "^0.7.4",
-    "turf": "^3.0.14",
-    "typescript": "^3.7.3"
-  },
-  "devDependencies": {
-    "cssnano": "^4.1.10"
-  }
+    "name": "dissinet.cathar-houses-languedoc",
+    "version": "1.0.5",
+    "description": "Houses of heretics: Cathar religious houses in Languedoc",
+    "author": "Adam Mertel <mertel.adam@gmail.com> | David Zbíral <david.zbiral@post.cz >",
+    "license": "ISC",
+    "homepage": "https://github.com/DISSINET/dissinet.cathar-houses-languedoc",
+    "main": "index.js",
+    "scripts": {
+        "clean-dist": "rm -f -r -d dist",
+        "start": "parcel app/index.html --open --no-cache",
+        "parse": "node data/parse.js",
+        "build": "npm run clean-dist && parcel build app/index.html --no-cache --public-url ./",
+        "deploy": "rsync -avz dist/ adamm@10.16.30.211:~/../../var/www/html/maps/cathar-houses-languedoc/ --delete",
+        "build-deploy": "npm run build && npm run deploy",
+        "build-tailwind": "./node_modules/.bin/tailwind build ./app/styles.css -c ./tailwind.js -o ./build/styles.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DISSINET/dissinet.cathar-houses-languedoc.git"
+    },
+    "keywords": [
+        "boilerplate",
+        "leaflet",
+        "react-leaflet",
+        "mobx"
+    ],
+    "dependencies": {
+        "@babel/preset-react": "^7.7.4",
+        "@babel/preset-typescript": "^7.7.4",
+        "@types/node": "^12.12.19",
+        "@types/react": "^16.9.16",
+        "@types/react-dom": "^16.9.4",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "font-awesome": "^4.7.0",
+        "google-spreadsheet": "^2.0.8",
+        "leaflet": "^1.6.0",
+        "leaflet.markercluster": "^1.4.1",
+        "mobx": "^5.15.1",
+        "mobx-react": "^5.4.4",
+        "postcss-custom-properties": "^8.0.11",
+        "postcss-import": "^12.0.1",
+        "postcss-nested": "^4.2.1",
+        "postcss-preset-env": "^6.7.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-leaflet": "^2.6.1",
+        "sass": "^1.23.7",
+        "tailwindcss": "^0.7.4",
+        "turf": "^3.0.14"
+    },
+    "devDependencies": {
+        "cssnano": "^4.1.10",
+        "typescript": "^3.8.3"
+    }
 }
