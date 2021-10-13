@@ -8,7 +8,7 @@
     "main": "index.js",
     "scripts": {
         "clean-dist": "rm -f -r -d dist",
-        "start": "parcel app/index.html --open --no-cache",
+        "start": "parcel app/index.html --open",
         "parse": "node data/parse.js",
         "build": "npm run clean-dist && parcel build app/index.html --no-cache --public-url ./",
         "deploy": "rsync -avz dist/ adamm@10.16.30.211:~/../../var/www/html/maps/cathar-houses-languedoc/ --delete",
@@ -26,19 +26,21 @@
         "mobx"
     ],
     "dependencies": {
-        "@babel/preset-react": "^7.7.4",
-        "@babel/preset-typescript": "^7.7.4",
+        "@babel/cli": "^7.15.7",
+        "@babel/core": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
+        "@babel/preset-react": "^7.14.5",
+        "@babel/preset-typescript": "^7.15.0",
         "@types/node": "^12.12.19",
         "@types/react": "^16.9.16",
         "@types/react-dom": "^16.9.4",
-        "babel-core": "^6.26.3",
-        "babel-preset-env": "^1.7.0",
         "font-awesome": "^4.7.0",
         "google-spreadsheet": "^3.1.15",
         "leaflet": "^1.6.0",
         "leaflet.markercluster": "^1.4.1",
         "mobx": "^5.15.1",
         "mobx-react": "^5.4.4",
+        "parcel": "1.12.4",
         "postcss-custom-properties": "^8.0.11",
         "postcss-import": "^12.0.1",
         "postcss-nested": "^4.2.1",
@@ -52,6 +54,7 @@
     },
     "devDependencies": {
         "cssnano": "^4.1.10",
+        "parcel-bundler": "^1.12.3",
         "typescript": "^3.8.3"
     }
 }
